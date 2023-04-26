@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
-import Header from '@/components/modules/Header/Header'
-import Layout from "@/components/layout/Layout";
+import Layout from '@/components/layout/Layout'
+import DashboardPage from '@/components/templates/DashboardPage/DashboardPage'
 
 function Dashboard() {
   const { shouldLoadContent } = useRedirectByUserCheck()
@@ -17,7 +17,10 @@ function Dashboard() {
       </Head>
 
       <Layout>
-        test
+        <main>
+          <DashboardPage />
+          <div className="overlay" />
+        </main>
       </Layout>
     </>
   )
